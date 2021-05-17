@@ -20,7 +20,6 @@ categoryFantasy.addEventListener("click",fantasyCards);
 categoryShooter.addEventListener("click",shooterCards);
 categoryAccion.addEventListener("click",actionCards);
 
-
 function onClickEventPrev(e){
      prev(e)
  }
@@ -29,14 +28,12 @@ function onClickEventPrev(e){
      next(e)
  }
  
-
  function addCarouselInfo (e){
      e.preventDefault();
  if (e.target.classList.contains('slider-img')){
      const carouselInfo = e.target.parentElement;
      readCarouselInfo(carouselInfo)
-     
- }
+     }
  }
  
  //Leer los datos del carousel 
@@ -46,16 +43,13 @@ function onClickEventPrev(e){
          image:carouselInfo.querySelector('img').src,
         
      }
-     
    saveCarouselInfo(carouselInfo);
    showGames(carouselInfo);
  }
  
  function showGames(cards){
     let carousels = JSON.parse(localStorage.getItem("carousels"));
-    console.log(carousels)
     let imgID = carousels[carousels.length-1].image;
-    console.log(imgID)
     if (imgID === "http://127.0.0.1:5501/img/TerrorG.jpg"){
         terrorCards();
     }
@@ -221,13 +215,11 @@ function onClickEventPrev(e){
     window.location.href= "detail2.html";
 }
 
-
   const getGameByCategory = async (category) => {
     const url = `http://localhost:3000/Games?category=${category}`;
     try {
       const request = await fetch(url);
       let games = await request.json(); //transformamos response en json 
-      console.log(games);
       if (url === "http://localhost:3000/Games?category=Terror"){
         createTerrorCards(games);
       }
@@ -244,10 +236,6 @@ function onClickEventPrev(e){
       console.log(error);
     }
   }
-
-
-
- // Ivo
 
 let loginActive = document.getElementById("responsiveUser");
 function loginOn (){
@@ -275,7 +263,6 @@ function removeLS(){
   localStorage.removeItem("userActive");
   location.reload();
 }
-
 
  function removeAll() {
     //Usamos un while para recorrer todos los hijos y quitar el elemento que seleccionemos
@@ -307,9 +294,7 @@ function removeLS(){
     return carousels;
     }
 
-
     let counter2 = 0;
-
     function next(e) {
         e.preventDefault();
         if(counter2 >= 3) {
