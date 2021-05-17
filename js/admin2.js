@@ -80,25 +80,17 @@ const deleFormContainer = document.getElementById(`deleFormContainer`);
         body: JSON.stringify({ name,style,category,imgSource,publicado,destacado})
       })
       const newData = await response.json();
-      console.log(newData);
-      debugger
     }
-    
-    
+     
     getTodos().then(Games => buildTodo(Games));
  
-
-
-
     async function deleteVideoGame (id) {
-      console.log(id);
       const newURL = `http://localhost:3000/Games/${id}`;
       const response = await fetch(newURL, {
         method: 'DELETE'
       })
     }
     
-     
     todoList.addEventListener(`click`, e => {
       if(e.target.classList.contains(`deleteButton`)) {
         const id = e.target.id;
@@ -134,16 +126,12 @@ const deleFormContainer = document.getElementById(`deleFormContainer`);
       deleFormContainer.appendChild(form);
     }
 
-
-    
     deleFormContainer.addEventListener(`click`, e => {
       if(e.target.classList.contains(`aceptar`)) {
-        const id = e.target.id;
-        
+        const id = e.target.id;       
         deleteVideoGame(id);
       }
-    })
-    //
+    });
     
     todoList.addEventListener(`click`,e => {
       if(e.target.classList.contains(`editButton`)) {
@@ -220,7 +208,6 @@ const deleFormContainer = document.getElementById(`deleFormContainer`);
       editFormContainer.appendChild(form);
     }
 
-
     async function editTodo(id, inputData) {
       const url= `http://localhost:3000/Games/${id}`;
       const response = await fetch(url, {
@@ -248,11 +235,8 @@ const deleFormContainer = document.getElementById(`deleFormContainer`);
         editTodo(idvalue, data);
     })
  
-
-
-    /*Ivo*/
     let loginActive = document.getElementById("responsiveUser");
-function loginOn (){
+    function loginOn (){
     if (localStorage.getItem("userActive") == "admin"){
         loginActive.innerHTML=`
             <a class="nav-link dropdown-toggle active text-right" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -288,8 +272,6 @@ todoList.addEventListener(`click`, e => {
 })
 
 async function destacarVideogame (id, dataDestacado) {
-  console.log(id)
-  console.log(dataDestacado)
   const newURL = `http://localhost:3000/Games/${id}`;
   const response = await fetch(newURL, {
     method: 'PATCH',
