@@ -1,11 +1,8 @@
 let cardList = document.getElementById("cardList");
 let developers = [
     {name: "Adriana Pérez Albert", image:"/img/adriana.png"},
-    {name: "David Moisés Sarhid", image:"/img/david.png"},
-    {name: "Enrico Palerno", image:"/img/enrico.png"},
     {name: "Giselle Mangini", image:"/img/giselle.png"},
     {name: "Ivo Montanari", image:"/img/ivo.png"},
-    {name: "Sebastian Andrade", image:"/img/seba.png"}
 ]
 
 
