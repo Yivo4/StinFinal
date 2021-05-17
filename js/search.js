@@ -17,7 +17,6 @@ function removeSearch (e){
 }
 
 searchBar.addEventListener('keyup',(e)=>{
-    console.log (e.target.value)
 const searchValue = e.target.value.toLowerCase(); 
 const filteredGames = gamesSearch.filter ((game => {
     return (
@@ -26,7 +25,6 @@ const filteredGames = gamesSearch.filter ((game => {
     game.category.toLowerCase().includes(searchValue)
     );
 }));
-console.log(filteredGames)
 displayGamesSearch (filteredGames)
 });
 
@@ -48,7 +46,6 @@ const getGames = async url_api => {
 
 function pushArray (games) {
     gamesSearch = games;
-    console.log(gamesSearch)
 }
 
 
