@@ -53,13 +53,12 @@ const deleFormContainer = document.getElementById(`deleFormContainer`);
         <button id= ${game.id} type="button" class="btn  btnedit editButton text-white" data-toggle="modal" data-target="#modalForm"><span class="fas fa-edit"></span>Editar</button>
         </td>
         <td id="${game.destacado}">
-        <button id= ${game.id} type="button" class="btndestacado btn text-white"><span id="${game.destacado}"  class="estrella"></span>Destacado</button>
+        <button id= ${game.id} type="button" class="btndestacado btn text-white"><span id="${game.destacado}"  class="estrella"></span>Destacar</button>
         </td>
       `
         todoList.appendChild(row);
       })
       let starOnOff = document.querySelectorAll(".estrella");
-      console.log(starOnOff)
       for (i=0; i<starOnOff.length;i++){
         if (starOnOff[i].id === "si"){
           starOnOff[i].classList.add("fas","fa-star")
@@ -185,7 +184,7 @@ const deleFormContainer = document.getElementById(`deleFormContainer`);
         <div>
           <label for="todoInput">Publicado:</label>
           <br>
-          <input type="radio"  name="published" value="true"> Si <br>
+          <input type="radio" checked name="published" value="true"> Si <br>
           <input type="radio" name="published" value="false"> No <br>
         </div>
         <div>
@@ -228,7 +227,7 @@ const deleFormContainer = document.getElementById(`deleFormContainer`);
         const namevalue = document.getElementById(`namevalue`).value;
         const categoryvalue = document.getElementById(`categoryvalue`).value;
         const stylevalue = document.getElementById(`stylevalue`).value;
-        const publicadovalue= document.querySelector('input[name="published"]:checked').value =='true';
+        const publicadovalue= document.querySelector('input[name="published"]:checked').value;
         const imgvalue = document.getElementById(`imgvalue`).value;
         const destacadovalue = document.getElementById(`destacadovalue`).value;
         const data = {id: idvalue, name: namevalue, category: categoryvalue, style: stylevalue, publicado: publicadovalue, imgSource:imgvalue, destacado:destacadovalue}
