@@ -612,22 +612,11 @@
     {
       "id": 32,
       "name": "Bloodborne",
-      "style": "multiplayer",
       "category": "Accion",
+      "style": "multiplayer",
+      "publicado": "true",
       "imgSource": "/img/A8.jpg",
-      "publicado": true,
-      "destacado": "no",
-      "text": "Bloodborne es un videojuego de rol de acción dirigido por Hidetaka Miyazaki, desarrollado por From Software y JapanStudio distribuido por Sony Computer Entertainment para la plataforma de PlayStation 4.1​2​ El videojuego sigue las acciones del personaje del jugador, el Cazador, a través de Yharnam, una ciudad ficticia de estilo victoriano, cuyos habitantes han sido afectados con una enfermedad de transmisión sanguínea anormal.",
-      "video1": "www.youtube.com/embed/G203e1HhixY",
-      "video2": "www.youtube.com/embed/TmZ5MTIu5hU",
-      "galery1": "/img/B1.jpg",
-      "galery2": "/img/B2.jpg",
-      "galery3": "/img/B3.jpg",
-      "galery4": "/img/B4.jpg",
-      "galery5": "/img/B5.jpg",
-      "galery6": "/img/B6.jpg",
-      "galery7": "/img/B7.jpg",
-      "galery8": "/img/B8.jpg"
+      "destacado": "no"
     }
   ]
 }

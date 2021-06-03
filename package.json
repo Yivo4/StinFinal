@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "server": "json-server --watch Games.json"
+    "server": "json-server --watch Games.json",
+    "build": "json-server --watch Games.json"
   },
   "author": "",
   "license": "ISC"
