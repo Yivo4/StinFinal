@@ -7,8 +7,8 @@
     "node": "12.x"
   },
   "scripts": {
-    "server": "json-server --watch Games.json"
-    
+    "server": "json-server --watch Games.json",
+    "start": "node landing.html"
   },
   "author": "",
   "license": "ISC"
